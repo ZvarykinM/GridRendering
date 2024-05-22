@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:ScottPlot="clr-namespace:ScottPlot.Avalonia;assembly=ScottPlot.Avalonia"
+        x:Class="GridRendering.MainWindow"
+        Title="GridRendering"  Width="900" Height="950">
+
+    <Grid RowDefinitions="900,50" Grid.Column="1">
+        <ScottPlot:AvaPlot Name="GridPlot" Grid.Row="0" Grid.Column="0"/>
+        <Grid Height="50" Width="900" ColumnDefinitions="700,200" Grid.Row="1">
+            <TextBox Name="InputPathToJson" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+            <Grid Height="50" Width="200" RowDefinitions="25,25" Grid.Column="1">
+                <Button Click="ClickHandler" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Red" Foreground="White" FontSize="12">change data on the plot</Button>
+                <Button Click="ClickRenew" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Green" Foreground="White" FontSize="12">renew hole states</Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
